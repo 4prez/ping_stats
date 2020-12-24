@@ -21,13 +21,7 @@ result = array('b', [1, 2, 3, 4, 5, 6])
 path_abs = os.path.dirname(os.path.abspath(__file__))
 print(path_abs)
 
-# host_name = socket.gethostname()
-# host_ip = socket.gethostbyname(host_name)
-# print("Hostname :  ", host_name)
-#print("IP : ", host_ip)
-# print("")
-
-# log startup-reboot
+# log file
 
 startup_csv_path = str(os.path.join(path_abs, 'results.csv'))
 print(startup_csv_path)
