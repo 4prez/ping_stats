@@ -35,7 +35,7 @@ with open(startup_csv_path, 'a') as fd:
     fd.write("dt_UDM_8888_1111")
     fd.write("\n")
 
-winsound.Beep(frequency, duration)
+# winsound.Beep(frequency, duration)
 
 all = 0 # 1 - Prints all result, else prints only on inet connection issues
 n = 1
