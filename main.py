@@ -30,6 +30,10 @@ with open(startup_csv_path, 'a') as fd:
     fd.write("\n")
 
 n=1
+j = 1
+s_UDM = 0
+s_8 = 0
+s_1 = 0
 while n==1:
     i = 1
     if __name__ == '__main__':
@@ -43,11 +47,16 @@ while n==1:
             #    print(f"{each} is not available")
             #print(result[i])
             i = i +1
-
-    output_string = (time_ping + "_"+str(result[1])+"_"+str(result[2])+"_"+str(result[3]))
+    s_UDM = s_UDM + result[1]
+    s_8 = s_8 + result[2]
+    s_1 = s_1 + result[3]
+    output_string = (time_ping + " " + str(result[1])+ "_" + str(round(100 * s_UDM / j, 0)) + "_" +
+                     str(result[2]) + "_" + str(round(100*s_8/j, 0)) + "_" +
+                     str(result[3]) + "_" + str(round(100*s_1/j, 0)))
     print(output_string)
     with open(startup_csv_path, 'a') as fd:
         fd.write(output_string)
         fd.write("\n")
     i=1
+    j = j + 1
     time.sleep(1)
